@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "feedback",
+  "info": {
+    "name": "feedback"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "like": {
+      "type": "integer",
+      "default": 0
+    },
+    "username": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "type": {
+      "type": "string"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "pending",
+        "completed",
+        "in_progress",
+        "archived"
+      ],
+      "default": "pending",
+      "required": false
+    }
+  }
+}
